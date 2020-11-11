@@ -1,7 +1,5 @@
 package com.citybike.service;
 
-import io.restassured.response.Response;
-import org.junit.Assert;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
@@ -13,26 +11,23 @@ public class CityBikeApiTests {
     @Test
     public void testNetworks() {
 
-        Response response = given().get(host)
-                .andReturn();
-
-        response.then().log().all();
-
-        Assert.assertEquals(200, response.getStatusCode());
+        given().get(host)
+                .then()
+                .log().all()
+                .assertThat()
+                .statusCode(200);
 
     }
 
     @Test
     public void testLatLong() {
 
-        Response response = given().get(host + "/v2/networks/velobike-moscow")
-                .andReturn();
-
-        response.then().log().all();
-
-        Assert.assertEquals(200, response.getStatusCode());
+        given().get(host + "/v2/networks/velobike-moscow")
+                .then()
+                .log().all()
+                .assertThat()
+                .statusCode(200);
 
     }
-
 
 }

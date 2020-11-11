@@ -1,4 +1,31 @@
-# Restassured-test-framework
+# RestAssured-test-framework
 
-Repository contains Rest assured tests with Java, Maven
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Contact](#contact)
+
+## General info
+
+Repository contains backend automation tests for [http://api.citybik.es/v2/](http://api.citybik.es/v2/)
+
+## Technologies
+
+Project is created with:
+
+* Java
+* Maven
+* Rest Assured
+* Junit4
+
+## Setup
+
+To run this project, run below maven commands
+
+``` mvn clean test ```
+
+
+## Contact
+[marya.induri@gmail.com](marya.induri@gmail.com)
 
