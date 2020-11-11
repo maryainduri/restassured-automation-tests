@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class CityBikeApiTests {
 
-    final String host = "http://api.citybik.es/v2/networks";
+    private final String host = "http://api.citybik.es/v2/networks";
 
     @Test
     public void testNetworks() {

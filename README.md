@@ -8,7 +8,7 @@
 
 ## General info
 
-Repository contains backend automation tests for [http://api.citybik.es/v2/](http://api.citybik.es/v2/)
+Repository contains backend automation tests for [Citybike API](http://api.citybik.es/v2/)
 
 ## Technologies
 
