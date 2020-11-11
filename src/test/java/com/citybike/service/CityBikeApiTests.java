@@ -3,6 +3,7 @@ package com.citybike.service;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.notNullValue;
 
 public class CityBikeApiTests {
 
@@ -22,12 +23,12 @@ public class CityBikeApiTests {
     @Test
     public void testLatLong() {
 
-        given().get(host + "/v2/networks/velobike-moscow")
+        given().get(host + "/velobike-moscow")
                 .then()
                 .log().all()
                 .assertThat()
-                .statusCode(200);
-
+                .statusCode(200).and().body("network.location.latitude", notNullValue())
+                .body("network.location.longitude", notNullValue());
     }
 
 }
